@@ -18,6 +18,7 @@ public class SubstituteAllTest {
 		String source = "r is a r is a r is a r.";
 
 		String actual = Methods.substituteAll(source, 'r', "rose");
+		System.out.println(actual);
 		assertEquals("rose is a rose is a rose is a rose.", actual);
 	}
 
@@ -29,7 +30,9 @@ public class SubstituteAllTest {
 		assertEquals("beauty is t, t beauty,", actual);
 
 		String actualPrime = Methods.substituteAll(actual, 't', "truth");
+		
 		assertEquals("beautruthy is truth, truth beautruthy,", actualPrime);
+		System.out.println(actualPrime);
 	}
 
 	@Test
@@ -44,5 +47,6 @@ public class SubstituteAllTest {
 
 		String actualPrimePrime = Methods.substituteAll(actualPrime, '!', "not");
 		assertEquals("to be or not to be", actualPrimePrime);
+		System.out.println(actualPrimePrime);
 	}
 }
